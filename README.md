@@ -1,20 +1,8 @@
-# Mechanical Engineering Project Template
-
-A reusable starting point for projects in the Mechanical Engineering Department. Use this repository as a template to organize a project’s mechanical design, electronics, software, machine skills, simulation, documentation, experiments, and publications.
-
-## Getting started
-
-1. Select **Use this template** on GitHub to create a repository for your project.
-2. Rename the project in this README and update the project summary, team, and objectives.
-3. Review the folder READMEs and replace the examples with project-specific information.
-4. Create GitHub Issues for tasks and record important design decisions and test results.
-5. Check the license placeholder and select appropriate terms before sharing or reusing project work.
-
 ## Project overview
 
-- **Project name:** [Enter project name]
-- **Problem / purpose:** [Describe the engineering need]
-- **Team:** [Names and responsibilities]
+- **Project name:** Peaucellier Straight-Line Mechanism
+- **Problem / purpose:** 
+- **Team:** กลุ่มนี้ไม่ใช้เไ
 - **Status:** Planning
 - **Last updated:** [YYYY-MM-DD]
 
