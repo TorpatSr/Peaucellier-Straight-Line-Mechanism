@@ -195,5 +195,5 @@ The output followed a vertical path and reversed direction at each end of the st
 
 
 ## Part IV: Built Mechanism
-![Top View](media/Top-View.png)
-![Isometric](media/ISO.png)
+![Top View](media/Top.png)
+![Isometric](media/Isometric.png)
