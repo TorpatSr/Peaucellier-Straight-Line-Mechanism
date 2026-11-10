@@ -35,6 +35,39 @@ Document hazards, safeguards, and operating limits before testing hardware. Vali
 
 ## Part I: Basics including kinematic diagram, DoF analysis
 ![Peaucellier Straight-Line Mechanism kinematics diagram](media/kinematics.jpg)
+The Peaucellier–Lipkin mechanism consists of **8 links**, including the ground, connected by revolute joints. Link 4 serves as the input crank, while joint G produces straight-line motion.
+
+### 1.1. Link and Joint Identification
+
+| Link | Description | Length |
+|:---:|---|:---:|
+| 1 | Ground (O₂–O₄) | 40 mm |
+| 2–3 | Connecting links (O₂–A, O₂–E) | 105 mm |
+| 4 | Input crank (O₄–C) | 40 mm |
+| 5–8 | Rhombus links (A–C, C–E, A–G, E–G) | 35 mm |
+
+The mechanism has **6 physical revolute joint locations**: O₂, O₄, A/B, C/D, E/F, and G. Four of these are ternary joints, giving **10 equivalent revolute joints**.
+
+### 1.2. Degrees of Freedom (DOF)
+
+Using the planar Grübler–Kutzbach equation:
+
+$$
+DOF = 3(n-1)-2J_1-J_2
+$$
+
+where:
+- n = 8 links
+- J₁ = 10 equivalent revolute joints
+- J₂ = 0 higher pairs
+
+Substituting:
+
+$$
+DOF = 3(8-1)-2(10)=\boxed{1}
+$$
+
+The mechanism has **one degree of freedom**, controlled by the rotation of Link 4.
 
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
 The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 40 mm, and 35 mm, respectively. The crank was driven sinusoidally through ±30° with a period of 8 s. One complete cycle was simulated with a fixed time step of 0.01 s.
