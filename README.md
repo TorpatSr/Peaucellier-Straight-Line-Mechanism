@@ -38,16 +38,17 @@ Document hazards, safeguards, and operating limits before testing hardware. Vali
 
 The Peaucellier–Lipkin mechanism consists of **8 links**, including the ground, connected by revolute joints. Link 4 serves as the input crank, while joint G produces straight-line motion.
 
+
 ### 1.1. Link and Joint Identification
 
 | Link | Description | Length |
 |:---:|---|:---:|
-| 1 | Ground (O₂–O₄) | 40 mm |
-| 2–3 | Connecting links (O₂–A, O₂–E) | 105 mm |
-| 4 | Input crank (O₄–C) | 35 mm |
-| 5–8 | Rhombus links (A–C, C–E, A–G, E–G) | 40 mm |
+| 1 | Ground (O₂,O₃–O₄) | 35 mm |
+| 2–3 | Connecting links (O₂–A, O₃–E) | 105 mm |
+| 4 | Input crank (O₄–C,D) | 35 mm |
+| 5–8 | Rhombus links (A–C, D–E, B–G, F–G) | 40 mm |
 
-The mechanism has **6 physical revolute joint locations**: O₂, O₄, A/B, C/D, E/F, and G. Four of these are ternary joints, giving **10 equivalent revolute joints**.
+The mechanism has **6 physical revolute joint locations**: O₂,O₃, O₄, A/B, C/D, E/F, and G. Four locations connect three links each, giving **10 equivalent revolute joints**.
 
 ### 1.2. Degrees of Freedom (DOF)
 
@@ -62,6 +63,8 @@ where:
 - J₁ = 10 equivalent revolute joints
 - J₂ = 0 higher pairs
 
+The four ternary joint locations (O₂,O₃; A/B; C/D; E/F) each count as two equivalent revolute joints, while O₄ and G each count as one.
+
 Substituting:
 
 $$
@@ -71,6 +74,7 @@ $$
 The mechanism has **one degree of freedom**, controlled by the rotation of Link 4.
 
 ### 1.3. Workspace Analysis
+
 The output joint G follows an exact vertical straight-line path. Using the link dimensions of a = 105 mm, b = 40 mm, and r = 35 mm, the workspace was evaluated in MATLAB.
 
 | Parameter | Value |
@@ -81,6 +85,7 @@ The output joint G follows an exact vertical straight-line path. Using the link 
 | Total output stroke | **106.08 mm** |
 
 The results confirm that joint G moves along a vertical straight line with a total evaluated stroke of **106.08 mm**.
+
 
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
 ### 2.1. MATLAB Kinematic Simulation
