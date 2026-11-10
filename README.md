@@ -35,6 +35,7 @@ Document hazards, safeguards, and operating limits before testing hardware. Vali
 
 ## Part I: Basics including kinematic diagram, DoF analysis
 ![Peaucellier Straight-Line Mechanism kinematics diagram](media/kinematics.jpg)
+
 The Peaucellier–Lipkin mechanism consists of **8 links**, including the ground, connected by revolute joints. Link 4 serves as the input crank, while joint G produces straight-line motion.
 
 ### 1.1. Link and Joint Identification
