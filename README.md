@@ -84,7 +84,7 @@ The results confirm that joint G moves along a vertical straight line with a tot
 
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
 ### 2.1. 
-![Simscape](media/Simscape.gif)
+![Simscape](media/SymbolicMath.gif)
 
 ### 2.2. Governing Equations and Position Analysis
 
