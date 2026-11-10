@@ -64,5 +64,65 @@ The output followed a vertical path and reversed direction at each end of the st
 -->
 
 ## Part III: Simscape Multibody 
+### 1.1. Governing Equations and Position Analysis
+The Peaucellier Straight-Line Mechanism operates based on the geometric inversion principle, which relates the distances from the fixed pivot O₂ to the input joint C,D and output joint G:
+$$
+O_2(C,D)\times O_2G=a^2-b^2
+\tag{1}
+$$
+Taking O₂ as the origin and O₄ at (r, 0), the input joint C,D moves along a circular path as Link 4 rotates. Its coordinates are expressed as:
+$$
+x_{C,D}=r(1+\cos\theta)
+\tag{2}
+y_{C,D}=r\sin\theta
+\tag{3}
+$$
+
+where θ is the angular displacement of Link 4. Since O₂, C,D, and G remain collinear, the inversion relationship can be used to determine the output position:
+
+$$
+x_G=\frac{a^2-b^2}{2r}=L
+\tag{4}
+$$
+
+$$
+y_G=L\tan\left(\frac{\theta}{2}\right)
+\tag{5}
+$$
+
+where a = 105 mm is the length of Links 2–3, b = 35 mm is the length of Links 5–8, and r = 40 mm is both the input crank length (Link 4) and the distance between fixed pivots O₂ and O₄. Substituting these values into Equation (4) gives **L = 122.50 mm**. Since the horizontal position of G remains constant, the joint follows an exact vertical straight-line path.
+
+### 1.2. Velocity and Acceleration Analysis
+
+The velocity and acceleration of output joint G are obtained by differentiating its position equations with respect to time. Since the horizontal position remains constant, both horizontal velocity and acceleration are zero.
+
+**Velocity:**
+
+$$
+v_{Gx}=\frac{dx_G}{dt}=0
+\tag{6}
+$$
+
+$$
+v_{Gy}=\frac{dy_G}{dt}
+=\frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\omega
+\tag{7}
+$$
+
+**Acceleration:**
+
+$$
+a_{Gx}=\frac{d^2x_G}{dt^2}=0
+\tag{8}
+$$
+
+$$
+a_{Gy}=\frac{dv_{Gy}}{dt}
+=\frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)
+\left[\alpha+\omega^2\tan\left(\frac{\theta}{2}\right)\right]
+\tag{9}
+$$
+
+where ω and α represent the angular velocity and angular acceleration of Link 4, respectively. For the numerical analysis, a constant angular velocity of **ω = 1 rad/s** and zero angular acceleration (**α = 0**) are assumed. These equations describe the vertical motion of joint G as the input crank rotates.
 
 ## Part IV: Built Mechanism
