@@ -2,7 +2,7 @@ clc; clear all;
 % Peaucellier-Lipkin
 % All is SI Units (m,kg/m^3)
 width = 0.010;
-thickness = 0.004;
+thickness = 0.010;
 lho = 1000;
 
 % Coordinate [x y z] in SI Units
