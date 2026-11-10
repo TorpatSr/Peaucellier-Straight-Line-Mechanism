@@ -112,6 +112,8 @@ The output followed a vertical path and reversed direction at each end of the st
 
 ## Part III: Simscape Multibody 
 
+![Simscape](media/Simscape.gif)
+
 ### 3.1. Governing Equations and Position Analysis
 
 The Peaucellier Straight-Line Mechanism operates based on the geometric inversion principle, which relates the distances from the fixed pivot O₂ to the input joint C,D and output joint G:
