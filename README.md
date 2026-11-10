@@ -34,7 +34,7 @@ Use descriptive filenames and commit messages. Record units, revisions, software
 Document hazards, safeguards, and operating limits before testing hardware. Validate important calculations and simulation results against measurements where practical.
 
 ## Part I: Basics including kinematic diagram, DoF analysis
-![Peaucellier Straight-Line Mechanism kinematics diagram](media/Peaucellier Straight-Line Mechanism kinematics diagram.jpg)
+![Peaucellier Straight-Line Mechanism kinematics diagram](media/kinematics.jpg)
 
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
 The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 40 mm, and 35 mm, respectively. The crank was driven sinusoidally through ±30° with a period of 8 s. One complete cycle was simulated with a fixed time step of 0.01 s.
