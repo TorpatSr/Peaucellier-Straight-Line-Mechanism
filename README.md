@@ -5,6 +5,12 @@
 - **Team:** กลุ่มนี้ไม่ใช้เไ
 - **Status:** Planning
 - **Last updated:** [2026-11-03]
+- **Group Members:**
+  |Name|Student ID|
+  |---|---|
+  |Torpat Sirilattaporn|6730192621|
+  |Thanayut Thawornpracha|6730222821|
+  |Ruj Samarnworakit|6730454021|
 
 ## Repository structure
 
