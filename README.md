@@ -83,7 +83,10 @@ The output joint G follows an exact vertical straight-line path. Using the link 
 The results confirm that joint G moves along a vertical straight line with a total evaluated stroke of **106.08 mm**.
 
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
-### 2.1. 
+### 2.1. MATLAB Kinematic Simulation
+
+The Peaucellier–Lipkin mechanism was analyzed in MATLAB using symbolic mathematics to determine the position, velocity, and acceleration of output joint G. The input crank (Link 4) was driven at a constant angular velocity of **1 rad/s**.
+
 ![Symbolic Math Results](media/SymbolicMath.gif)
 
 ### 2.2. Governing Equations and Position Analysis
