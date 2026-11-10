@@ -44,8 +44,8 @@ The Peaucellier–Lipkin mechanism consists of **8 links**, including the ground
 |:---:|---|:---:|
 | 1 | Ground (O₂–O₄) | 40 mm |
 | 2–3 | Connecting links (O₂–A, O₂–E) | 105 mm |
-| 4 | Input crank (O₄–C) | 40 mm |
-| 5–8 | Rhombus links (A–C, C–E, A–G, E–G) | 35 mm |
+| 4 | Input crank (O₄–C) | 35 mm |
+| 5–8 | Rhombus links (A–C, C–E, A–G, E–G) | 40 mm |
 
 The mechanism has **6 physical revolute joint locations**: O₂, O₄, A/B, C/D, E/F, and G. Four of these are ternary joints, giving **10 equivalent revolute joints**.
 
@@ -70,8 +70,20 @@ $$
 
 The mechanism has **one degree of freedom**, controlled by the rotation of Link 4.
 
+### 1.3. Workspace Analysis
+The output joint G follows an exact vertical straight-line path. Using the link dimensions of a = 105 mm, b = 40 mm, and r = 35 mm, the workspace was evaluated in MATLAB.
+
+| Parameter | Value |
+|---|---:|
+| Horizontal position (xG) | 134.64 mm |
+| Input angle range | −43.00° to +43.00° |
+| Vertical range (yG) | −53.04 to +53.04 mm |
+| Total output stroke | **106.08 mm** |
+
+The results confirm that joint G moves along a vertical straight line with a total evaluated stroke of **106.08 mm**.
+
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
-The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 40 mm, and 35 mm, respectively. The crank was driven sinusoidally through ±30° with a period of 8 s. One complete cycle was simulated with a fixed time step of 0.01 s.
+The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 35 mm, and 40 mm, respectively. The crank was driven sinusoidally through ±30° with a period of 8 s. One complete cycle was simulated with a fixed time step of 0.01 s.
 
 A Transform Sensor measured the position, velocity, and acceleration of the output pin center $P$ in World coordinates. The simulated motion was compared with the analytical relation $y_P = x_0 \tan(\theta/2)$, where $x_0 = 134.643$ mm is the nominal horizontal position and $\theta$ is the prescribed crank angle.
 
