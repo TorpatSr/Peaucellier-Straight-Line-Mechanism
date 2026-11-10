@@ -94,7 +94,8 @@ The results confirm that joint G moves along a vertical straight line with a tot
 
 The Peaucellier–Lipkin mechanism was analyzed in MATLAB using symbolic mathematics to determine the position, velocity, and acceleration of output joint G. The input crank (Link 4) was driven at a constant angular velocity of **1 rad/s**, while the remaining links moved according to the geometric constraints of the mechanism.
 
-**MATLAB Live Script:** [SymbolicMath.mlx](simulation/Symbolic%20Math/SymbolicMath.mlx)
+- [View MATLAB Script (.m)](simulation/Symbolic%20Math/SymbolicMath.m)
+- [Download MATLAB Live Script (.mlx)](simulation/Symbolic%20Math/SymbolicMath.mlx)
 
 ![Symbolic Math Results](media/SymbolicMath.gif)
 
