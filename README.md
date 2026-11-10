@@ -140,7 +140,7 @@ $$
 y_G = L\tan\left(\frac{\theta}{2}\right)
 $$
 
-where a = 105 mm is the length of Links 2–3, b = 35 mm is the length of Links 5–8, and r = 40 mm is both the input crank length (Link 4) and the distance between fixed pivots O₂ and O₄. Substituting these dimensions into the horizontal position equation gives **L = 122.50 mm**. Since the horizontal position of G remains constant, the joint follows an exact vertical straight-line path.
+where a = 105 mm is the length of Links 2–3, b = 35 mm is the length of Links 5–8, and r = 40 mm is both the input crank length (Link 4) and the distance between fixed pivots O₂ and O₄. Substituting these dimensions into the horizontal position equation gives **L = 134.64 mm**. Since the horizontal position of G remains constant, the joint follows an exact vertical straight-line path.
 
 ### 3.2. Velocity and Acceleration Analysis
 
