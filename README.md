@@ -83,10 +83,10 @@ The output joint G follows an exact vertical straight-line path. Using the link 
 The results confirm that joint G moves along a vertical straight line with a total evaluated stroke of **106.08 mm**.
 
 ## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
-### 3.1. 
+### 2.1. 
 ![Simscape](media/Simscape.gif)
 
-### 3.1. Governing Equations and Position Analysis
+### 2.2. Governing Equations and Position Analysis
 
 The Peaucellier Straight-Line Mechanism operates based on the geometric inversion principle, which relates the distances from the fixed pivot O₂ to the input joint C,D and output joint G:
 
@@ -116,7 +116,7 @@ $$
 
 where a = 105 mm is the length of Links 2–3, b = 35 mm is the length of Links 5–8, and r = 40 mm is both the input crank length (Link 4) and the distance between fixed pivots O₂ and O₄. Substituting these dimensions into the horizontal position equation gives **L = 134.64 mm**. Since the horizontal position of G remains constant, the joint follows an exact vertical straight-line path.
 
-### 3.2. Velocity and Acceleration Analysis
+### 2.3. Velocity and Acceleration Analysis
 
 The velocity and acceleration of output joint G are obtained by differentiating its position equations with respect to time. Since the horizontal position remains constant, both horizontal velocity and acceleration are zero.
 
