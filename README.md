@@ -189,7 +189,8 @@ A Transform Sensor measured the position, velocity, and acceleration of the outp
 
 The output followed a vertical path and reversed direction at each end of the stroke. The largest acceleration difference occurred at $t=0$.
 
-[Mechanism.avi](media/Peaucellier.avi). The video shows one complete cycle, with the output pin traversing its full operating range.
+The video shows one complete cycle in ![Mechanism.avi](media/Peaucellier.avi), with the output pin traversing its full operating range.
+[Mechanism.avi](media/Peaucellier.avi)
 
 
 ## Part IV: Built Mechanism
