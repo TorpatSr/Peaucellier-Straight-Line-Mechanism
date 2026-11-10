@@ -87,42 +87,54 @@ The output joint G follows an exact vertical straight-line path. Using the link 
 The results confirm that joint G moves along a vertical straight line with a total evaluated stroke of **106.08 mm**.
 
 
-## Part II: Symbolic Math for the selected mechanism : submit your script in the text box
+
+## Part II: Symbolic Math for the Selected Mechanism
+
 ### 2.1. MATLAB Kinematic Simulation
 
-The Peaucellier–Lipkin mechanism was analyzed in MATLAB using symbolic mathematics to determine the position, velocity, and acceleration of output joint G. The input crank (Link 4) was driven at a constant angular velocity of **1 rad/s**.
+The Peaucellier–Lipkin mechanism was analyzed in MATLAB using symbolic mathematics to determine the position, velocity, and acceleration of output joint G. The input crank (Link 4) was driven at a constant angular velocity of **1 rad/s**, while the remaining links moved according to the geometric constraints of the mechanism.
+
+**MATLAB Live Script:** [SymbolicMath.mlx](simulation/Symbolic%20Math/SymbolicMath.mlx)
 
 ![Symbolic Math Results](media/SymbolicMath.gif)
 
 ### 2.2. Governing Equations and Position Analysis
 
-The Peaucellier Straight-Line Mechanism operates based on the geometric inversion principle, which relates the distances from the fixed pivot O₂ to the input joint C,D and output joint G:
+The Peaucellier–Lipkin mechanism operates based on the **geometric inversion principle**, which relates the distances from the coincident fixed pivots O₂,O₃ to the input joint C/D and output joint G:
 
 $$
-O_2(C,D) \times O_2G = a^2 - b^2
+O_2(C,D)\times O_2G=a^2-b^2
 $$
 
-Taking O₂ as the origin and O₄ at (r, 0), the input joint C,D moves along a circular path as Link 4 rotates. Its coordinates are expressed as:
+Taking O₂,O₃ as the origin and O₄ at (r, 0), the input joint C/D moves along a circular path as Link 4 rotates. Its coordinates are expressed as:
 
 $$
-x_{C,D} = r(1+\cos\theta)
-$$
-
-$$
-y_{C,D} = r\sin\theta
-$$
-
-where θ is the angular displacement of Link 4. Since O₂, C,D, and G remain collinear, the inversion relationship can be used to determine the output position:
-
-$$
-x_G = \frac{a^2-b^2}{2r} = L
+x_{C,D}=r(1+\cos\theta)
 $$
 
 $$
-y_G = L\tan\left(\frac{\theta}{2}\right)
+y_{C,D}=r\sin\theta
 $$
 
-where a = 105 mm is the length of Links 2–3, b = 35 mm is the length of Links 5–8, and r = 40 mm is both the input crank length (Link 4) and the distance between fixed pivots O₂ and O₄. Substituting these dimensions into the horizontal position equation gives **L = 134.64 mm**. Since the horizontal position of G remains constant, the joint follows an exact vertical straight-line path.
+where θ is the angular displacement of Link 4. Since O₂,O₃, C/D, and G remain collinear, the inversion relationship can be used to determine the output position:
+
+$$
+x_G=\frac{a^2-b^2}{2r}=L
+$$
+
+$$
+y_G=L\tan\left(\frac{\theta}{2}\right)
+$$
+
+where **a = 105 mm** is the length of Links 2–3, **b = 40 mm** is the length of Links 5–8, and **r = 35 mm** is both the input crank length (Link 4) and the distance between fixed pivots O₂,O₃ and O₄.
+
+Substituting these dimensions:
+
+$$
+L=\frac{105^2-40^2}{2(35)}=134.64\text{ mm}
+$$
+
+Since the horizontal position of G remains constant, the joint follows an **exact vertical straight-line path**.
 
 ### 2.3. Velocity and Acceleration Analysis
 
@@ -131,26 +143,29 @@ The velocity and acceleration of output joint G are obtained by differentiating 
 **Velocity:**
 
 $$
-v_{Gx} = \frac{dx_G}{dt} = 0
+v_{Gx}=\frac{dx_G}{dt}=0
 $$
 
 $$
-v_{Gy} = \frac{dy_G}{dt} = \frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\omega
+v_{Gy}=\frac{dy_G}{dt}=\frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\omega
 $$
 
 **Acceleration:**
 
 $$
-a_{Gx} = \frac{d^2x_G}{dt^2} = 0
+a_{Gx}=\frac{d^2x_G}{dt^2}=0
 $$
 
 $$
-a_{Gy} = \frac{dv_{Gy}}{dt} = \frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\left[\alpha+\omega^2\tan\left(\frac{\theta}{2}\right)\right]
+a_{Gy}=\frac{dv_{Gy}}{dt}=\frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\left[\alpha+\omega^2\tan\left(\frac{\theta}{2}\right)\right]
 $$
 
-![Kinematic analysis](media/Analysis.png)
+where **ω** and **α** represent the angular velocity and angular acceleration of Link 4, respectively. For the numerical analysis, a constant angular velocity of **ω = 1 rad/s** and zero angular acceleration (**α = 0 rad/s²**) are assumed.
 
-where ω and α represent the angular velocity and angular acceleration of Link 4, respectively. For the numerical analysis, a constant angular velocity of **ω = 1 rad/s** and zero angular acceleration (**α = 0**) are assumed. These equations describe the vertical motion of joint G as the input crank rotates.
+These equations describe the vertical motion of joint G as the input crank rotates, providing the analytical reference for comparison with the Simscape Multibody simulation in Part III.
+
+![Kinematic Analysis](media/Analysis.png)
+
 
 ## Part III: Simscape Multibody 
 The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 35 mm, and 40 mm, respectively. The crank was driven sinusoidally through ±30° with a period of 8 s. One complete cycle was simulated with a fixed time step of 0.01 s.
