@@ -174,7 +174,7 @@ The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape M
 A Transform Sensor measured the position, velocity, and acceleration of the output pin center $P$ in World coordinates. The simulated motion was compared with the analytical relation $y_P = x_0 \tan(\theta/2)$, where $x_0 = 134.643$ mm is the nominal horizontal position and $\theta$ is the prescribed crank angle.
 
 ![Figure 1](media/figure_1.png)
-**Figure 1.** (a) Simscape Multibody model showing the fixed pivots and output point $P$. (b) Measured trajectory of $P$. (c) Vertical velocity and (d) vertical acceleration compared with analytical predictions.
+(a) Simscape Multibody model showing the fixed pivots and output point $P$. (b) Measured trajectory of $P$. (c) Vertical velocity and (d) vertical acceleration compared with analytical predictions.
 
 **Table 1. Numerical results for one input cycle.**
 
