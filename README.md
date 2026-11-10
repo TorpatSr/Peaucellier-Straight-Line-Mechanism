@@ -4,7 +4,7 @@
 - **Problem / purpose:** 
 - **Team:** กลุ่มนี้ไม่ใช้เไ
 - **Status:** Planning
-- **Last updated:** [2026-11-03]
+- **Last updated:** [2026-11-10]
 - **Group Members:**
   |Name|Student ID|
   |---|---|
@@ -169,20 +169,20 @@ These equations describe the vertical motion of joint G as the input crank rotat
 
 
 ## Part III: Simscape Multibody 
-The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 35 mm, and 40 mm, respectively. The crank was driven sinusoidally through ±30° with a period of 8 s. One complete cycle was simulated with a fixed time step of 0.01 s.
+The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 35 mm, and 40 mm, respectively. The crank was driven sinusoidally through ±43.00° with constant angular velocity of $1\ rad/s$ and angular acceleration of $1\ rad/s^2$. One complete cycle was simulated with a fixed time step of 0.01 s.
 
-A Transform Sensor measured the position, velocity, and acceleration of the output pin center $P$ in World coordinates. The simulated motion was compared with the analytical relation $y_P = x_0 \tan(\theta/2)$, where $x_0 = 134.643$ mm is the nominal horizontal position and $\theta$ is the prescribed crank angle.
+A Transform Sensor measured the position, velocity, and acceleration of the output pin center $G$ in World coordinates. The simulated motion was compared with the analytical relation $y_G = x_G \tan(\theta/2)$, where $x_G = 134.643$ mm is the nominal horizontal position and $\theta$ is the prescribed crank angle.
 
 ![Figure 1](media/figure_1.png)
-(a) Simscape Multibody model showing the fixed pivots and output point $P$. (b) Measured trajectory of $P$. (c) Vertical velocity and (d) vertical acceleration compared with analytical predictions.
+(a) Simscape Multibody model showing the fixed pivots and output point $P$. (b) Measured trajectory of $G$. (c) Vertical velocity and (d) vertical acceleration compared with analytical predictions.
 
-**Table 1. Numerical results for one input cycle.**
+**Table 1. Analytical reference for one constant-speed sweep.**
 
 | Quantity | Result |
 | --- | ---: |
-| Vertical stroke of point $P$ | 72.155 mm |
-| Peak vertical speed | 0.027685 m/s |
-| Peak vertical acceleration magnitude | 0.023305 m/s² |
+| Vertical stroke of point $G$ | 106.08 mm |
+| Peak vertical speed | 0.07777 m/s |
+| Peak vertical acceleration magnitude | 0.03063 m/s² |
 | Maximum horizontal deviation from the theoretical line | $5.98 \times 10^{-11}$ mm |
 | Maximum absolute difference in vertical velocity from the analytical prediction | $1.01 \times 10^{-14}$ m/s |
 | Maximum absolute difference in vertical acceleration from the analytical prediction | $8.14 \times 10^{-12}$ m/s² |
