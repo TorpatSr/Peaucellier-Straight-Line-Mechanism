@@ -148,6 +148,8 @@ $$
 a_{Gy} = \frac{dv_{Gy}}{dt} = \frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\left[\alpha+\omega^2\tan\left(\frac{\theta}{2}\right)\right]
 $$
 
+![Kinematic analysis](media/Analysis.png)
+
 where ω and α represent the angular velocity and angular acceleration of Link 4, respectively. For the numerical analysis, a constant angular velocity of **ω = 1 rad/s** and zero angular acceleration (**α = 0**) are assumed. These equations describe the vertical motion of joint G as the input crank rotates.
 
 ## Part III: Simscape Multibody 
