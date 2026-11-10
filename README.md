@@ -169,7 +169,7 @@ These equations describe the vertical motion of joint G as the input crank rotat
 
 
 ## Part III: Simscape Multibody 
-The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 35 mm, and 40 mm, respectively. The crank was driven sinusoidally through ±43.00° with constant angular velocity of $1\ rad/s$ and angular acceleration of $1\ rad/s^2$. One complete cycle was simulated with a fixed time step of 0.01 s.
+The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 35 mm, and 40 mm, respectively. The crank was driven sinusoidally through ±43.00° with constant angular velocity of ω = 1 rad/s and zero angular acceleration (α = 0 rad/s²). One complete cycle was simulated with a fixed time step of 0.01 s.
 
 A Transform Sensor measured the position, velocity, and acceleration of the output pin center $G$ in World coordinates. The simulated motion was compared with the analytical relation $y_G = x_G \tan(\theta/2)$, where $x_G = 134.643$ mm is the nominal horizontal position and $\theta$ is the prescribed crank angle.
 
