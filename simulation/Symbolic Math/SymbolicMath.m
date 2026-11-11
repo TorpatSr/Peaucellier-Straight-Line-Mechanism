@@ -32,7 +32,7 @@ for i = 1:7
         'LineWidth',3,'MarkerFaceColor',colors(i,:)); %[output:561be268]
 end
 
-names = {'O_2','O_4','C,D','A,B','E,F','G'};
+names = {'O_2,O_3','O_4','C,D','A,B','E,F','G'};
 labels = gobjects(1,6);
 for i = 1:6
     labels(i) = text(nan,nan,names{i},'FontWeight','bold'); %[output:561be268]
