@@ -183,9 +183,9 @@ A Transform Sensor measured the position, velocity, and acceleration of the outp
 | Vertical stroke of point $G$ | 106.08 mm |
 | Peak vertical speed | 0.07777 m/s |
 | Peak vertical acceleration magnitude | 0.03063 m/s² |
-| Maximum horizontal deviation from the theoretical line | $6.042 \times 10^{-11}$ mm |
-| Maximum absolute difference in vertical velocity from the analytical prediction | $1.533 \times 10^{-13}$ m/s |
-| Maximum absolute difference in vertical acceleration from the analytical prediction | $2.375 \times 10^{-11}$ m/s² |
+| Maximum horizontal deviation from the theoretical line | $5.906 \times 10^{-11}$ mm |
+| Maximum absolute difference in vertical velocity from the analytical prediction | $6.968 \times 10^{-14}$ m/s |
+| Maximum absolute difference in vertical acceleration from the analytical prediction | $8.470 \times 10^{-12}$ m/s² |
 
 The output followed a vertical path and reversed direction at each end of the stroke. The largest acceleration difference occurred at $t=0$.
 
