@@ -194,5 +194,5 @@ The video shows one complete cycle, with the output pin traversing its full oper
 
 
 ## Part IV: Built Mechanism
-![Top View](media/Top.png)
-![Isometric](media/Isometric.png)
+![Top View](media/iso.png)
+![Isometric](media/overview.png)
