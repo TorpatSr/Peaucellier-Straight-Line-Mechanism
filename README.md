@@ -165,7 +165,7 @@ where **ω** and **α** represent the angular velocity and angular acceleration 
 
 These equations describe the vertical motion of joint G as the input crank rotates, providing the analytical reference for comparison with the Simscape Multibody simulation in Part III.
 
-![Kinematic Analysis](media/Analysis.png)
+![Kinematic Analysis](media/Analysis.png?v=2)
 
 
 ## Part III: Simscape Multibody 
