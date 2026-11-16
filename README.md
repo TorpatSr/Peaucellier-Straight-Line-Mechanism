@@ -48,7 +48,7 @@ The Peaucellier–Lipkin mechanism consists of **8 links**, including the ground
 | 4 | Input crank (O₄–C,D) | 35 mm |
 | 5–8 | Rhombus links (A–C, D–E, B–G, F–G) | 40 mm |
 
-The mechanism has **6 physical revolute joint locations**: O₂,O₃, O₄, A/B, C/D, E/F, and G. Four locations connect three links each, giving **10 equivalent revolute joints**.
+The mechanism has **6 physical revolute joint locations**: O₂/O₃, O₄, A/B, C/D, E/F, and G. Four locations connect three links each, giving **10 equivalent revolute joints**.
 
 ### 1.2. Degrees of Freedom (DOF)
 
