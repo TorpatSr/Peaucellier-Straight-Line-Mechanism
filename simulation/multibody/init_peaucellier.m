@@ -1,9 +1,10 @@
+%% Initialize variables 
 clc; clear all;
 % Peaucellier-Lipkin
 % All is SI Units (m,kg/m^3)
 width = 0.010;
 thickness = 0.010;
-lho = 1000;
+lho = 1240;
 
 % Coordinate [x y z] in SI Units
 O4 = [0.035 0 0];
@@ -13,8 +14,24 @@ L4 = 0.035;
 L23 = 0.105;
 L5678 = 0.040;
 
+%% Find Stroke
+% Link dimensions
+a = L23;       % 0.105 m
+b = L5678;     % 0.040 m
+r = L4;        % 0.035 m
+
+% Theoretical straight-line position
+xG_theory = (a^2 - b^2)/(2*r);
+
+% Geometric limit before singular configuration
+theta_geometric = 2*acos((a-b)/(2*r));
+
+% Selected working range
+theta_working = deg2rad(43.00);
+amplitude = theta_working;
+
+%% Input Preparation
 mode = 0; % 0 for linear input, 1 for sin input
-amplitude = 43.00*pi/180;
 
 % Sin mode
 T=8; 
@@ -23,14 +40,14 @@ freq = 1/T;
 
 % Linear mode
 crankRate = 1;                 % Angular velocity (rad/s)
-T = 2 * amplitude / crankRate; % Time form -30° to +30° (s)
+T = 2 * amplitude / crankRate; % Time for one linear sweep from -theta_working to +theta_working
 
 %% Appearance L{Number}_CS (Cross section)
 % L4_CS = peaucellier_capsule_profile(L4, width);
 % L23_CS = peaucellier_capsule_profile(L23, width);
 % L5678_CS = peaucellier_capsule_profile(L5678, width);
 
-% Initial joint position targets (rad)
+%% Initial joint position targets (rad)
 qCrank0 = -amplitude;
 crankTip0 = O4(1:2) + L4 * [cos(qCrank0), sin(qCrank0)];
 r = norm(crankTip0);
