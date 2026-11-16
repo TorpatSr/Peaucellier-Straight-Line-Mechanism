@@ -223,7 +223,7 @@ $$
 
 The maximum transverse deviation was $5.90\times10^{-11}$ mm, which is far below the selected numerical tolerance of $1.0\times10^{-6}$ mm. The visible fluctuations in the straightness-error graph therefore represent numerical noise rather than physical curvature of the path.
 
-![Part III Simscape Multibody results](media/figure_1.png)
+![Part III Simscape Multibody results](media/figure_1_new.png)
 
 *Figure 1. (a) Simscape Multibody model. (b) Workspace and extreme positions of point G. (c) Symbolic–Multibody position comparison. (d) Transverse straightness error.*
 
