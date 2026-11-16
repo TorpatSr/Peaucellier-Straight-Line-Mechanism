@@ -169,25 +169,69 @@ These equations describe the vertical motion of joint G as the input crank rotat
 
 
 ## Part III: Simscape Multibody 
-The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The planar assembly contains seven moving rigid links and ten revolute joints. The pin-to-pin lengths of the long links, rhombus links, and input crank are 105 mm, 40 mm, and 35 mm, respectively. The crank was driven through ±43.00° with constant angular velocity of ω = 1 rad/s and zero angular acceleration (α = 0 rad/s²). One complete cycle was simulated with a fixed time step of 0.01 s.
+### 3.1. Simulation Setup
 
-A Transform Sensor measured the position, velocity, and acceleration of the output pin center $G$ in World coordinates. The simulated motion was compared with the analytical relation $y_G = x_G \tan(\theta/2)$, where $x_G = 134.643$ mm is the nominal horizontal position and $\theta$ is the prescribed crank angle.
+The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The model uses the same link dimensions and kinematic configuration defined in Parts I and II.
 
-![Figure 1](media/figure_1.png)
-(a) Simscape Multibody model showing the fixed pivots and output point $P$. (b) Measured trajectory of $G$. (c) Vertical velocity and (d) vertical acceleration compared with analytical predictions.
+The input angle $\theta$ was measured from the `Input_O4` Revolute Joint, while a Transform Sensor measured the horizontal and vertical positions of output point $G$ in the World frame. The crank completed one constant-speed sweep at $1\ \text{rad/s}$.
 
-**Table 1. Analytical reference for one constant-speed sweep.**
+The recorded input range was $-43.0000^\circ$ to $+42.9437^\circ$. The small difference from the intended symmetric range of $\pm43^\circ$ results from the final discrete simulation time step.
+
+The Multibody positions were compared with the Symbolic Math results from Part II at the same recorded crank angles.
+
+Relevant files:
+
+- [Simscape Multibody model](simulation/multibody/Peaucellier.slx)
+- [Result-analysis script](simulation/multibody/plot_peaucellier_results.mlx)
+
+### 3.2. Extreme Positions and Working Space
+
+The working extremes were identified from the minimum and maximum vertical positions of point $G$.
+
+| Configuration | Crank angle | $x_G$ | $y_G$ |
+|---|---:|---:|---:|
+| Lower extreme | $-43.0000^\circ$ | 134.642857 mm | −53.037232 mm |
+| Center sample | $-0.0282^\circ$ | 134.642857 mm | −0.033094 mm |
+| Upper extreme | $+42.9437^\circ$ | 134.642857 mm | +52.960789 mm |
+
+The Multibody working stroke was therefore
+
+$$
+S_{\mathrm{MB}}=105.998021\ \text{mm}.
+$$
+
+The center sample is slightly displaced from exactly $0^\circ$ because the results are stored at discrete time steps. The horizontal coordinate remains effectively constant throughout the sweep, so the working space of point $G$ is a vertical line segment.
+
+### 3.3. Symbolic–Multibody Comparison
 
 | Quantity | Result |
-| --- | ---: |
-| Vertical stroke of point $G$ | 106.08 mm |
-| Peak vertical speed | 0.07777 m/s |
-| Peak vertical acceleration magnitude | 0.03063 m/s² |
-| Maximum horizontal deviation from the theoretical line | $5.906 \times 10^{-11}$ mm |
-| Maximum absolute difference in vertical velocity from the analytical prediction | $6.968 \times 10^{-14}$ m/s |
-| Maximum absolute difference in vertical acceleration from the analytical prediction | $8.470 \times 10^{-12}$ m/s² |
+|---|---:|
+| Symbolic Math stroke | 105.998121 mm |
+| Simscape Multibody stroke | 105.998021 mm |
+| Stroke difference | $-1.00422\times10^{-4}$ mm |
+| Maximum vertical-position difference | $2.11812\times10^{-4}$ mm |
+| Maximum horizontal deviation | $5.90035\times10^{-11}$ mm |
+| Straightness band | $5.90319\times10^{-11}$ mm |
 
-The output followed a vertical path and reversed direction at each end of the stroke. The largest acceleration difference occurred at $t=0$.
+The Symbolic Math and Multibody vertical-position curves overlap throughout the simulated range. Their stroke values differ by approximately $0.000100$ mm, while the maximum vertical-position difference is approximately $0.000212$ mm. These small differences are attributed to solver tolerances, interpolation, and discrete time sampling.
+
+Straightness was evaluated from the transverse error
+
+$$
+\Delta x_G = x_{G,\mathrm{MB}} - x_{G,\mathrm{symbolic}}.
+$$
+
+The maximum transverse deviation was $5.90\times10^{-11}$ mm, which is far below the selected numerical tolerance of $1.0\times10^{-6}$ mm. The visible fluctuations in the straightness-error graph therefore represent numerical noise rather than physical curvature of the path.
+
+![Part III Simscape Multibody results](media/figure_1.png)
+
+*Figure 1. (a) Simscape Multibody model. (b) Workspace and extreme positions of point G. (c) Symbolic–Multibody position comparison. (d) Transverse straightness error.*
+
+### 3.4. Conclusion
+
+The Simscape Multibody results agree closely with the Symbolic Math analysis. Point $G$ completed a working stroke of $105.998021$ mm while maintaining an effectively constant horizontal position.
+
+The measured transverse deviation remained within the numerical precision of the solver. The ideal Multibody model can therefore be considered to reproduce the theoretical straight-line motion over the evaluated working range.
 
 The video shows one complete cycle, with the output pin traversing its full operating range. [Download Video (.avi)](media/Peaucellier.avi)
 ![Mechanism.gif](media/Peaucellier.gif)
