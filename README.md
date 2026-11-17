@@ -88,11 +88,14 @@ The results confirm that joint G moves along a vertical straight line with a tot
 
 
 
+
 ## Part II: Symbolic Math for the Selected Mechanism
 
 ### 2.1. MATLAB Kinematic Simulation
 
-The Peaucellier–Lipkin mechanism was analyzed in MATLAB using symbolic mathematics to determine the position, velocity, and acceleration of output joint G. The input crank (Link 4) was driven at a constant angular velocity of **1 rad/s**, while the remaining links moved according to the geometric constraints of the mechanism.
+The Peaucellier–Lipkin mechanism was analyzed in MATLAB to demonstrate the straight-line motion of output joint G. Link 4 was selected as the input crank and driven at a constant angular velocity of 1 rad/s.
+
+The simulation illustrates the mechanism's motion, the straight-line trajectory of point G, and its extreme positions within the working range.
 
 - [View MATLAB Script (.m)](simulation/Symbolic%20Math/SymbolicMath.m)
 - [Download MATLAB Live Script (.mlx)](simulation/Symbolic%20Math/SymbolicMath.mlx)
@@ -101,13 +104,13 @@ The Peaucellier–Lipkin mechanism was analyzed in MATLAB using symbolic mathema
 
 ### 2.2. Governing Equations and Position Analysis
 
-The Peaucellier–Lipkin mechanism operates based on the **geometric inversion principle**, which relates the distances from the coincident fixed pivots O₂,O₃ to the input joint C/D and output joint G:
+The Peaucellier–Lipkin mechanism operates based on the geometric inversion principle:
 
 $$
 O_2(C,D)\times O_2G=a^2-b^2
 $$
 
-Taking O₂,O₃ as the origin and O₄ at (r, 0), the input joint C/D moves along a circular path as Link 4 rotates. Its coordinates are expressed as:
+Taking O₂,O₃ as the origin and O₄ at (r, 0), the coordinates of the input joint C/D are:
 
 $$
 x_{C,D}=r(1+\cos\theta)
@@ -117,7 +120,7 @@ $$
 y_{C,D}=r\sin\theta
 $$
 
-where θ is the angular displacement of Link 4. Since O₂,O₃, C/D, and G remain collinear, the inversion relationship can be used to determine the output position:
+The output position of point G is:
 
 $$
 x_G=\frac{a^2-b^2}{2r}=L
@@ -127,45 +130,87 @@ $$
 y_G=L\tan\left(\frac{\theta}{2}\right)
 $$
 
-where **a = 105 mm** is the length of Links 2–3, **b = 40 mm** is the length of Links 5–8, and **r = 35 mm** is both the input crank length (Link 4) and the distance between fixed pivots O₂,O₃ and O₄.
+where:
 
-Substituting these dimensions:
+- a = 105 mm: Length of Links 2–3
+- b = 40 mm: Length of Links 5–8
+- r = 35 mm: Length of Link 4 and the ground distance O₂O₄
 
-$$
-L=\frac{105^2-40^2}{2(35)}=134.64\text{ mm}
-$$
-
-Since the horizontal position of G remains constant, the joint follows an **exact vertical straight-line path**.
-
-### 2.3. Velocity and Acceleration Analysis
-
-The velocity and acceleration of output joint G are obtained by differentiating its position equations with respect to time. Since the horizontal position remains constant, both horizontal velocity and acceleration are zero.
-
-**Velocity:**
+Substituting the dimensions:
 
 $$
-v_{Gx}=\frac{dx_G}{dt}=0
+L=\frac{105^2-40^2}{2(35)}=134.643\text{ mm}
+$$
+
+Since the horizontal coordinate of G remains constant, point G follows an exact vertical straight-line path.
+
+### 2.3. Extreme Positions, Workspace, and Stroke
+
+The output workspace is determined by the allowable input angle range of Link 4.
+
+The theoretical limiting angle is:
+
+$$
+\theta_{\mathrm{limit}}=
+2\cos^{-1}\left(\frac{a-b}{2r}\right)
+$$
+
+To avoid the limiting configuration, a small angular margin of 0.01 rad is applied:
+
+$$
+\theta_{\max}=\theta_{\mathrm{limit}}-0.01
+$$
+
+The evaluated input range is approximately:
+
+$$
+-43.03^\circ\leq\theta\leq43.03^\circ
+$$
+
+The extreme vertical positions are:
+
+$$
+y_{\max}=L\tan\left(\frac{\theta_{\max}}{2}\right)
 $$
 
 $$
-v_{Gy}=\frac{dy_G}{dt}=\frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\omega
+y_{\min}=-y_{\max}
 $$
 
-**Acceleration:**
+The total output stroke is:
 
 $$
-a_{Gx}=\frac{d^2x_G}{dt^2}=0
+S=y_{\max}-y_{\min}=2y_{\max}
 $$
 
+The output workspace of G is therefore a vertical line segment at x = 134.643 mm, bounded by the upper and lower extreme positions.
+
+### 2.4. Straight-Line Verification
+
+The ideal straight-line path is defined by:
+
 $$
-a_{Gy}=\frac{dv_{Gy}}{dt}=\frac{L}{2}\sec^2\left(\frac{\theta}{2}\right)\left[\alpha+\omega^2\tan\left(\frac{\theta}{2}\right)\right]
+x_G=L
 $$
 
-where **ω** and **α** represent the angular velocity and angular acceleration of Link 4, respectively. For the numerical analysis, a constant angular velocity of **ω = 1 rad/s** and zero angular acceleration (**α = 0 rad/s²**) are assumed.
+The horizontal deviation from the ideal path is:
 
-These equations describe the vertical motion of joint G as the input crank rotates, providing the analytical reference for comparison with the Simscape Multibody simulation in Part III.
+$$
+e_x(\theta)=x_G(\theta)-L
+$$
 
-![Kinematic Analysis](media/Analysis.png?v=2)
+Since x_G is constant, the theoretical straightness error is:
+
+$$
+e_x(\theta)=0
+$$
+
+Therefore, the ideal Peaucellier–Lipkin mechanism generates an exact straight line within its allowable working range.
+
+The analytical trajectory provides the reference for the Simscape Multibody comparison in Part III, where numerical deviations from the ideal straight line are evaluated.
+
+![Straight-Line Motion Analysis](media/Analysis.png?v=2)
+
 
 
 ## Part III: Simscape Multibody 
