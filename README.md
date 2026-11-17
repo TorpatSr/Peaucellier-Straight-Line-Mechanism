@@ -36,8 +36,9 @@ Document hazards, safeguards, and operating limits before testing hardware. Vali
 ## Part I: Basics including kinematic diagram, DoF analysis
 ![Peaucellier Straight-Line Mechanism kinematics diagram](media/kinematics.jpg)
 
-The Peaucellier–Lipkin mechanism consists of **8 links**, including the ground, connected by revolute joints. Link 4 serves as the input crank, while joint G produces straight-line motion.
+The Peaucellier Straight-Line Mechanism consists of **8 links**, including the ground, connected by revolute joints. Link 4 serves as the input crank, while joint G produces straight-line motion.
 
+The main function of the Peaucellier Straight-Line Mechanism is to convert the rotational motion of the input crank (Link 4) into exact straight-line motion at output joint G. Unlike approximate straight-line mechanisms, its ideal geometry constrains G to move along a perfectly vertical line within the allowable working range.
 
 ### 1.1. Link and Joint Identification
 
@@ -93,7 +94,7 @@ The results confirm that joint G moves along a vertical straight line with a tot
 
 ### 2.1. MATLAB Kinematic Simulation
 
-The Peaucellier–Lipkin mechanism was analyzed in MATLAB to demonstrate the straight-line motion of output joint G. Link 4 was selected as the input crank and driven at a constant angular velocity of 1 rad/s.
+The Peaucellier Straight-Line Mechanism was analyzed in MATLAB to demonstrate the straight-line motion of output joint G. Link 4 was selected as the input crank and driven at a constant angular velocity of 1 rad/s.
 
 The simulation illustrates the mechanism's motion, the straight-line trajectory of point G, and its extreme positions within the working range.
 
@@ -104,7 +105,7 @@ The simulation illustrates the mechanism's motion, the straight-line trajectory 
 
 ### 2.2. Governing Equations and Position Analysis
 
-The Peaucellier–Lipkin mechanism operates based on the geometric inversion principle:
+The Peaucellier Straight-Line Mechanism operates based on the geometric inversion principle:
 
 $$
 O_2(C,D)\times O_2G=a^2-b^2
@@ -205,7 +206,7 @@ $$
 e_x(\theta)=0
 $$
 
-Therefore, the ideal Peaucellier–Lipkin mechanism generates an exact straight line within its allowable working range.
+Therefore, the ideal Peaucellier Straight-Line Mechanism generates an exact straight line within its allowable working range.
 
 The analytical trajectory provides the reference for the Simscape Multibody comparison in Part III, where numerical deviations from the ideal straight line are evaluated.
 
@@ -216,7 +217,7 @@ The analytical trajectory provides the reference for the Simscape Multibody comp
 ## Part III: Simscape Multibody 
 ### 3.1. Simulation Setup
 
-The Peaucellier–Lipkin mechanism was modeled in MATLAB R2026a using Simscape Multibody. The model uses the same link dimensions and kinematic configuration defined in Parts I and II.
+The Peaucellier Straight-Line Mechanism was modeled in MATLAB R2026a using Simscape Multibody. The model uses the same link dimensions and kinematic configuration defined in Parts I and II.
 
 The input angle $\theta$ was measured from the `Input_O4` Revolute Joint, while a Transform Sensor measured the horizontal and vertical positions of output point $G$ in the World frame. The crank completed one constant-speed sweep at $1\ \text{rad/s}$.
 
