@@ -35,6 +35,7 @@ Document hazards, safeguards, and operating limits before testing hardware. Vali
 
 ## Part I: Basics including kinematic diagram, DoF analysis
 ![Peaucellier Straight-Line Mechanism kinematics diagram](media/kinematics.jpg)
+*Figure 1. Kinematic diagram of the Peaucellier Straight-Line Mechanism.*
 
 The Peaucellier Straight-Line Mechanism consists of **8 links**, including the ground, connected by revolute joints. Link 4 serves as the input crank, while joint G produces straight-line motion.
 
@@ -102,6 +103,7 @@ The simulation illustrates the mechanism's motion, the straight-line trajectory 
 - [Download MATLAB Live Script (.mlx)](simulation/Symbolic%20Math/SymbolicMath.mlx)
 
 ![Symbolic Math Results](media/SymbolicMath.gif)
+*Figure 2. MATLAB simulation of the straight-line motion of point G.*
 
 ### 2.2. Governing Equations and Position Analysis
 
@@ -211,7 +213,7 @@ Therefore, the ideal Peaucellier Straight-Line Mechanism generates an exact stra
 The analytical trajectory provides the reference for the Simscape Multibody comparison in Part III, where numerical deviations from the ideal straight line are evaluated.
 
 ![Straight-Line Motion Analysis](media/Analysis.png?v=2)
-
+*Figure 3. Output workspace and extreme positions of point G.*
 
 
 ## Part III: Simscape Multibody 
@@ -271,7 +273,7 @@ The maximum transverse deviation was $5.90\times10^{-11}$ mm, which is far below
 
 ![Part III Simscape Multibody results](media/figure_1_new.png)
 
-*Figure 1. (a) Simscape Multibody model. (b) Workspace and extreme positions of point G. (c) Symbolic–Multibody position comparison. (d) Transverse straightness error.*
+*Figure 4. (a) Simscape Multibody model. (b) Workspace and extreme positions of point G. (c) Symbolic–Multibody position comparison. (d) Transverse straightness error.*
 
 ### 3.4. Conclusion
 
