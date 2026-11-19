@@ -103,6 +103,7 @@ The simulation illustrates the mechanism's motion, the straight-line trajectory 
 - [Download MATLAB Live Script (.mlx)](simulation/Symbolic%20Math/SymbolicMath.mlx)
 
 ![Symbolic Math Results](media/SymbolicMath.gif)
+
 *Figure 2. MATLAB simulation of the straight-line motion of point G.*
 
 ### 2.2. Governing Equations and Position Analysis
@@ -213,6 +214,7 @@ Therefore, the ideal Peaucellier Straight-Line Mechanism generates an exact stra
 The analytical trajectory provides the reference for the Simscape Multibody comparison in Part III, where numerical deviations from the ideal straight line are evaluated.
 
 ![Straight-Line Motion Analysis](media/Analysis.png?v=2)
+
 *Figure 3. Output workspace and extreme positions of point G.*
 
 
