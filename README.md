@@ -1,7 +1,7 @@
 ## Project overview
 
-- **Project name:** Peaucellier Straight-Line Mechanism
-- **Problem / purpose:** The purpose of this project is to investigate how the Peaucellier–Lipkin mechanism converts rotational input into exact straight-line motion without requiring a sliding guide. The project focuses on analyzing the mechanism's degrees of freedom, workspace, and kinematic behavior using MATLAB Symbolic Math and Simscape Multibody. The analytical and simulation results are compared to verify the straight-line motion, while a physical prototype is built to demonstrate the mechanism's operation.
+- **Project name:** Peaucellier Straight-Line Mechanism(Peaucellier–Lipkin mechanism)
+- **Problem / purpose:** The purpose of this project is to investigate how the Peaucellier Straight-Line Mechanism converts rotational input into exact straight-line motion without requiring a sliding guide. The project focuses on analyzing the mechanism's degrees of freedom, workspace, and kinematic behavior using MATLAB Symbolic Math and Simscape Multibody. The analytical and simulation results are compared to verify the straight-line motion, while a physical prototype is built to demonstrate the mechanism's operation.
 - **Team:** กลุ่มนี้ไม่ใช้เไ
 - **Status:** Finish
 - **Last updated:** [2026-11-19]
