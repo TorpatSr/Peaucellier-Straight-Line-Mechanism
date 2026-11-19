@@ -288,10 +288,24 @@ The video shows one complete cycle, with the output pin traversing its full oper
 
 
 ## Part IV: Built Mechanism
+### 4.1. Assembly Design
+The Peaucellier Straight-Line Mechanism was designed and assembled in CAD based on the link dimensions defined in Part I. The assembly illustrates the arrangement of the links and revolute joints required to generate straight-line motion at output point G.
 ![Top View](media/iso.png)
-![Isometric](media/overview.png)
-<img width="1108" height="1477" alt="Overview hardware" src="https://github.com/user-attachments/assets/c8a97f3c-5698-4811-ba48-8e29fe709cd5" />
 
+*Figure 5. TOP VIEW CAD assembly of the Peaucellier Straight-Line Mechanism.*
+![Isometric](media/overview.png)
+
+*Figure 6. ISOMETRIC VIEW CAD assembly of the Peaucellier Straight-Line Mechanism.*
+
+### 4.2. Physical Prototype
+A physical prototype was constructed based on the CAD assembly to demonstrate the operation of the mechanism. The links were connected using revolute joints to allow the mechanism to move through its working range.
+<img width="1108" height="1477" alt="Overview hardware" src="https://github.com/user-attachments/assets/c8a97f3c-5698-4811-ba48-8e29fe709cd5" />
+*Figure 7. Physical prototype of the Peaucellier Straight-Line Mechanism.*
+
+### 4.3. Motion Demonstration
+The prototype was operated to demonstrate the conversion of rotational input motion into approximately straight-line motion at output point G.
+
+The demonstration video shows the movement of the assembled mechanism.
 
 https://github.com/user-attachments/assets/3cfc7d60-94a3-4b69-b03c-a9fcc0345cbf
 
