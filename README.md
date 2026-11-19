@@ -292,10 +292,10 @@ The video shows one complete cycle, with the output pin traversing its full oper
 The Peaucellier Straight-Line Mechanism was designed and assembled in CAD based on the link dimensions defined in Part I. The assembly illustrates the arrangement of the links and revolute joints required to generate straight-line motion at output point G.
 ![Top View](media/iso.png)
 
-*Figure 5. TOP VIEW CAD assembly of the Peaucellier Straight-Line Mechanism.*
+*Figure 5. TOP VIEW: CAD assembly of the Peaucellier Straight-Line Mechanism.*
 ![Isometric](media/overview.png)
 
-*Figure 6. ISOMETRIC VIEW CAD assembly of the Peaucellier Straight-Line Mechanism.*
+*Figure 6. ISOMETRIC VIEW: CAD assembly of the Peaucellier Straight-Line Mechanism.*
 
 ### 4.2. Physical Prototype
 A physical prototype was constructed based on the CAD assembly to demonstrate the operation of the mechanism. The links were connected using revolute joints to allow the mechanism to move through its working range.
@@ -304,10 +304,13 @@ A blue reference line was added to the prototype to indicate the intended straig
 *Figure 7. Physical prototype of the Peaucellier Straight-Line Mechanism.*
 
 ### 4.3. Motion Demonstration
-The prototype was operated to demonstrate the conversion of rotational input motion into approximately straight-line motion at output point G.
+The physical prototype was operated to demonstrate the conversion of rotational input motion into approximately straight-line motion at output point G.
 
-The demonstration video shows the movement of the assembled mechanism, with the blue reference line highlighting the intended straight-line path of point G. This allows the output motion to be visually observed and compared with the expected trajectory.
+The demonstration video shows the movement of the assembled mechanism, with the blue reference line highlighting the intended straight-line path of point G.
 
+However, unlike the MATLAB symbolic analysis and Simscape Multibody simulation, the physical prototype cannot achieve the full theoretical range of motion due to interference between overlapping links. This mechanical limitation restricts the allowable input angle and reduces the achievable output stroke.
+
+Despite this limitation, the prototype successfully demonstrates the straight-line motion principle of the Peaucellier–Lipkin mechanism within its accessible working range.
 https://github.com/user-attachments/assets/3cfc7d60-94a3-4b69-b03c-a9fcc0345cbf
 
 
