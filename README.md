@@ -312,7 +312,7 @@ However, unlike the MATLAB symbolic analysis and Simscape Multibody simulation, 
 
 Despite this limitation, the prototype successfully demonstrates the straight-line motion principle of the Peaucellier–Lipkin mechanism within its accessible working range.
 
-![Demonstration](media/Demonstration.mp4)
+
 
 
 https://github.com/user-attachments/assets/298311f2-f1af-4441-a6de-f3be17041727
