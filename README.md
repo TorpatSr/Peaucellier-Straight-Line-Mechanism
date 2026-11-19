@@ -300,7 +300,7 @@ The Peaucellier Straight-Line Mechanism was designed and assembled in CAD based 
 ### 4.2. Physical Prototype
 A physical prototype was constructed based on the CAD assembly to demonstrate the operation of the mechanism. The links were connected using revolute joints to allow the mechanism to move through its working range.
 A blue reference line was added to the prototype to indicate the intended straight-line path of output point G. This provides a visual reference for observing the straight-line motion during operation.
-<img width="1108" height="1477" alt="Overview hardware" src="https://github.com/user-attachments/assets/c8a97f3c-5698-4811-ba48-8e29fe709cd5" />
+![Hardware](media/Hardware.jpg)
 *Figure 7. Physical prototype of the Peaucellier Straight-Line Mechanism.*
 
 ### 4.3. Motion Demonstration
@@ -311,6 +311,7 @@ The demonstration video shows the movement of the assembled mechanism, with the 
 However, unlike the MATLAB symbolic analysis and Simscape Multibody simulation, the physical prototype cannot achieve the full theoretical range of motion due to interference between overlapping links. This mechanical limitation restricts the allowable input angle and reduces the achievable output stroke.
 
 Despite this limitation, the prototype successfully demonstrates the straight-line motion principle of the Peaucellier–Lipkin mechanism within its accessible working range.
+
 ![Demonstration](media/Hardware video.mp4)
 
 
