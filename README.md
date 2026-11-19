@@ -311,6 +311,6 @@ The demonstration video shows the movement of the assembled mechanism, with the 
 However, unlike the MATLAB symbolic analysis and Simscape Multibody simulation, the physical prototype cannot achieve the full theoretical range of motion due to interference between overlapping links. This mechanical limitation restricts the allowable input angle and reduces the achievable output stroke.
 
 Despite this limitation, the prototype successfully demonstrates the straight-line motion principle of the Peaucellier–Lipkin mechanism within its accessible working range.
-!(media/Hardware video.mp4)
+![Demonstration](media/Hardware video.mp4)
 
 
